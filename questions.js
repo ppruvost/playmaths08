@@ -3,106 +3,86 @@
    ============================================================ */
 
 const questions = [
-    {
-      question: "Quel symbole représente une lampe dans un schéma électrique ?",
-      options: ["Un cercle avec une croix", "Un rectangle avec un trait", "Un rond avec un L", "Un trait en zigzag"],
-      graphique: "symbole_lampe.png",
-      bonne_reponse: "Un cercle avec une croix",
-      explication: "Dans les schémas électriques normalisés, une lampe est représentée par un cercle avec une croix à l’intérieur."
-    },
-    {
-      question: "Que représente ce symbole dans un schéma électrique ?",
-      options: ["Un interrupteur", "Un moteur", "Une prise de courant", "Une pile"],
-      graphique: "symbole_interrupteur.png",
-      bonne_reponse: "Un interrupteur",
-      explication: "Ce symbole, un trait avec un petit rond ou une ligne brisée, correspond à un interrupteur qui permet d’ouvrir ou de fermer un circuit."
-    },
-    {
-      question: "Quel symbole correspond à une pile dans un schéma électrique ?",
-      options: ["Un trait horizontal", "Un rectangle", "Un long trait et un court trait parallèles", "Un cercle"],
-      graphique: "symbole_pile.png",
-      bonne_reponse: "Un long trait et un court trait parallèles",
-      explication: "La pile est représentée par deux traits parallèles de longueurs différentes, le plus long étant la borne positive."
-    },
-    {
-      question: "Quel outil utilise-t-on pour dénuder un fil électrique avant de le brancher ?",
-      options: ["Un tournevis", "Une pince à dénuder", "Un marteau", "Une clé à molette"],
-      graphique: "pince_denuder.png",
-      bonne_reponse: "Une pince à dénuder",
-      explication: "La pince à dénuder permet d’enlever l’isolant autour du fil sans abîmer le conducteur en cuivre."
-    },
-    {
-      question: "Dans quel ordre doit-on brancher les éléments d’un circuit série : lampe, interrupteur, pile ?",
-      options: [
-        "Pile → lampe → interrupteur",
-        "Interrupteur → pile → lampe",
-        "Pile → interrupteur → lampe",
-        "L’ordre n’a pas d’importance"
-      ],
-      graphique: "circuit_serie.png",
-      bonne_reponse: "L’ordre n’a pas d’importance",
-      explication: "Dans un circuit série, l’ordre des dipôles n’influence pas le fonctionnement, tant que le circuit est fermé."
-    },
-    {
-      question: "Quel est le rôle d’un fusible dans un circuit électrique ?",
-      options: [
-        "Protéger contre les surcharges et les courts-circuits",
-        "Augmenter la tension du circuit",
-        "Réguler l’intensité du courant",
-        "Allumer automatiquement les lampes"
-      ],
-      graphique: "fusible.png",
-      bonne_reponse: "Protéger contre les surcharges et les courts-circuits",
-      explication: "Le fusible fond et coupe le circuit en cas de surintensité, protégeant ainsi les appareils et les fils."
-    },
-    {
-      question: "Quel dispositif protège les personnes contre les risques d’électrocution en détectant les fuites de courant ?",
-      options: [
-        "Un fusible",
-        "Un disjoncteur différentiel",
-        "Un coupe-circuit",
-        "Un disjoncteur divisionnaire"
-      ],
-      graphique: "disjoncteur_differentiel.png",
-      bonne_reponse: "Un disjoncteur différentiel",
-      explication: "Le disjoncteur différentiel coupe automatiquement le courant s’il détecte une différence d’intensité entre la phase et le neutre, signe d’une fuite vers la terre."
-    },
-    {
-      question: "À quoi sert la mise à la terre dans une installation électrique ?",
-      options: [
-        "À améliorer la qualité du courant",
-        "À protéger les appareils en cas de surintensité",
-        "À évacuer les courants de défaut vers le sol",
-        "À augmenter la puissance disponible"
-      ],
-      graphique: "mise_a_la_terre.png",
-      bonne_reponse: "À évacuer les courants de défaut vers le sol",
-      explication: "La mise à la terre permet d’évacuer vers le sol les courants de défaut, protégeant ainsi les personnes et les matériels."
-    },
-    {
-      question: "Quel est le rôle d’un disjoncteur divisionnaire ?",
-      options: [
-        "Protéger un circuit spécifique contre les surcharges",
-        "Mesurer la consommation électrique",
-        "Remplacer un fusible",
-        "Augmenter la tension du circuit"
-      ],
-      graphique: "disjoncteur_divisionnaire.png",
-      bonne_reponse: "Protéger un circuit spécifique contre les surcharges",
-      explication: "Le disjoncteur divisionnaire protège un circuit électrique en coupant le courant en cas de surcharge ou de court-circuit."
-    },
-    {
-      question: "Pourquoi utilise-t-on un coupe-circuit dans une installation électrique ?",
-      options: [
-        "Pour économiser de l’énergie",
-        "Pour couper manuellement le courant en cas d’urgence",
-        "Pour augmenter la puissance du circuit",
-        "Pour mesurer la tension"
-      ],
-      graphique: "coupe_circuit.png",
-      bonne_reponse: "Pour couper manuellement le courant en cas d’urgence",
-      explication: "Le coupe-circuit permet d’interrompre manuellement l’alimentation électrique d’un circuit en cas de danger ou de maintenance."
-    }
+  {
+    question: "D’après le graphique, combien de solutions a l’équation f(x) = 0 ?",
+    options: ["Aucune solution", "Une solution", "Deux solutions", "Une infinité de solutions"],
+    graphique: "parabole_au_dessus_axe.png",
+    bonne_reponse: "Aucune solution",
+    explication: "La courbe ne coupe pas l’axe des abscisses, donc f(x) = 0 n’a aucune solution."
+  },
+  {
+    question: "Combien de solutions possède l’équation f(x) = 0 pour cette représentation graphique ?",
+    options: ["0", "1", "2", "3"],
+    graphique: "parabole_tangente_axe.png",
+    bonne_reponse: "1",
+    explication: "La parabole touche l’axe des abscisses en un seul point : il y a une solution."
+  },
+  {
+    question: "D’après le graphique ci-dessous, combien de solutions a l’équation f(x) = 0 ?",
+    options: ["Aucune", "Une", "Deux", "Impossible à savoir"],
+    graphique: "parabole_coupe_deux_fois.png",
+    bonne_reponse: "Deux",
+    explication: "La courbe coupe l’axe des abscisses en deux points distincts."
+  },
+  {
+    question: "Que peut-on dire du nombre de solutions de f(x) = 0 si la parabole est entièrement au-dessus de l’axe des abscisses ?",
+    options: ["0 solution", "1 solution", "2 solutions", "Cela dépend du sommet"],
+    graphique: "parabole_au_dessus.png",
+    bonne_reponse: "0 solution",
+    explication: "Si la courbe ne coupe pas l’axe des abscisses, l’équation f(x) = 0 n’a pas de solution."
+  },
+  {
+    question: "Si la parabole coupe l’axe des abscisses en deux points, combien y a-t-il de solutions ?",
+    options: ["Aucune", "Une", "Deux", "Trois"],
+    graphique: "parabole_deux_intersections.png",
+    bonne_reponse: "Deux",
+    explication: "Chaque point d’intersection avec l’axe des abscisses correspond à une solution."
+  },
+  {
+    question: "Sur ce graphique, la parabole touche l’axe des abscisses sans le couper. Combien y a-t-il de solutions ?",
+    options: ["0", "1", "2", "Cela dépend de x"],
+    graphique: "parabole_touche.png",
+    bonne_reponse: "1",
+    explication: "La parabole est tangente à l’axe des abscisses : il y a une solution double."
+  },
+  {
+    question: "Que représentent les solutions de l’équation f(x) = 0 sur un graphique ?",
+    options: [
+      "Les points où la courbe coupe l’axe des abscisses",
+      "Le sommet de la parabole",
+      "Les points où f(x) est maximal",
+      "Les intersections avec l’axe des ordonnées"
+    ],
+    graphique: "parabole_axes.png",
+    bonne_reponse: "Les points où la courbe coupe l’axe des abscisses",
+    explication: "Les solutions sont les abscisses des points où f(x) = 0."
+  },
+  {
+    question: "Si le sommet de la parabole est situé sous l’axe des abscisses, combien de solutions peut-on avoir ?",
+    options: ["0", "1", "2", "Impossible à déterminer"],
+    graphique: "sommet_sous_axe.png",
+    bonne_reponse: "2",
+    explication: "Une parabole de degré 2 avec un sommet sous l’axe coupe l’axe des abscisses en deux points."
+  },
+  {
+    question: "Si le sommet de la parabole est exactement sur l’axe des abscisses, combien y a-t-il de solutions ?",
+    options: ["0", "1", "2", "Une infinité"],
+    graphique: "sommet_sur_axe.png",
+    bonne_reponse: "1",
+    explication: "La parabole touche l’axe des abscisses en un seul point."
+  },
+  {
+    question: "Dans un contexte professionnel, que représente graphiquement une solution de f(x) = 0 ?",
+    options: [
+      "Un seuil où le coût ou le bénéfice est nul",
+      "Le maximum de production",
+      "La variation de la fonction",
+      "La pente de la courbe"
+    ],
+    graphique: "seuil_rentabilite.png",
+    bonne_reponse: "Un seuil où le coût ou le bénéfice est nul",
+    explication: "Graphiquement, f(x) = 0 correspond souvent à un seuil de rentabilité."
+  }
 ];
 
 /* ============================================================
